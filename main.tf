@@ -16,7 +16,7 @@ locals {
   tags = {
     Name       = local.name
     Example    = local.name
-    Repository = "https://github.com/terraform-aws-modules/terraform-aws-ecs"
+    Repository = "https://github.com/olexade/ecs-free-tier-optimized"
   }
 }
 
@@ -134,7 +134,7 @@ module "ecs_service" {
   tags = {
     Name       = "nginx"
     Example    = "nginx"
-    Repository = "https://github.com/terraform-aws-modules/terraform-aws-ecs"
+    Repository = "https://github.com/olexade/ecs-free-tier-optimized"
   }
 }
 
@@ -301,7 +301,7 @@ module "alb" {
           }]
           conditions = [{
             path_pattern = {
-              values = ["/nginx/*"]
+              values = ["/nginx*"]
             }
           }]
           tags = {

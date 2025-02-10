@@ -1,13 +1,22 @@
 # ECS Cluster w/ Multy target groups on ALB. Optimized for free tier - need to pay for public IPs only
 
+EC2 instances placed in public subnets to avoid payments for NAT gateway.
+
 Configuration in this directory creates:
 
 - ECS cluster using EC2 autoscaling groups
 - Autoscaling groups with IAM instance profile to be used by ECS cluster
-- Example ECS service that utilizes
-  - Mounts a host volume into the container definition
+- ECS service that utilizes
   - Load balancer target group attachment
   - Security group for access to the example service
+
+## Check
+
+Two ECS services should be deployed using two target groups:
+
+http://<ALB's DNS name>
+
+http://<ALB's DNS name>/nginx
 
 ## Usage
 
