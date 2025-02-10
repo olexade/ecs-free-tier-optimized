@@ -14,9 +14,11 @@ Configuration in this directory creates:
 
 Two ECS services should be deployed using two target groups:
 
-http://<ALB's DNS name>
+1. http://<ALB's DNS name>
 
-http://<ALB's DNS name>/nginx
+1. http://<ALB's DNS name>/tutorial
+
+1. http://<ALB's DNS name>/nginx
 
 ## Usage
 
